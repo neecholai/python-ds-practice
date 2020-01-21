@@ -12,3 +12,13 @@ def weekday_name(day_of_week):
         >>> weekday_name(9)
         >>> weekday_name(0)
     """
+    if day_of_week not in range(1,8):
+        return 
+
+    days_of_week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    day_of_week_index = day_of_week - 1
+
+    return days_of_week[day_of_week_index]
+
+print('should be sunday', weekday_name(1))
+print('should be None', weekday_name(9))

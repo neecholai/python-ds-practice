@@ -21,3 +21,11 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+
+    new_phrase = ''.join([letter for letter in phrase if letter is not " "])
+    new_phrase_lower = new_phrase.lower()
+
+    return new_phrase_lower == new_phrase_lower[::-1]
+
+print('should be True', is_palindrome('taco cat'))
+print('should be False', is_palindrome('robert'))
